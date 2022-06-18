@@ -13,7 +13,9 @@ ul {
   margin: 0px;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   margin: 0px;
 }
 
@@ -61,6 +63,7 @@ p {
   gap: 6px;
   align-items: center;
   margin-left: 120px;
+  width: 216px;
 }
 
 .logo-icon {
@@ -98,6 +101,7 @@ p {
   font-style: normal;
   font-weight: 500;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .button-login {
@@ -170,7 +174,7 @@ li {
   font-size: 20px;
   line-height: 24px;
   /* identical to box height */
-  padding-top: 30px;
+  padding-top: 32px;
 
   color: #ffffff;
 }
@@ -190,4 +194,15 @@ li {
   height: 59px;
   font-size: 24px;
   line-height: 32px;
+}
+
+.name-section {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+  /* identical to box height */
+
+  color: #f2785c;
 }
