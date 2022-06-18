@@ -44,7 +44,7 @@ p {
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -81,6 +81,10 @@ p {
   color: #ffffff;
 }
 
+.header-nav {
+  padding-left: 158px;
+}
+
 .button {
   display: flex;
   flex-direction: row;
@@ -101,11 +105,16 @@ p {
   height: 41px;
   font-size: 16px;
   line-height: 21px;
+  margin-left: 196px;
   margin-right: 120px;
 }
 
 li {
   list-style: none;
+}
+
+.header-link {
+  text-decoration: none;
 }
 
 .header-list {
@@ -161,7 +170,7 @@ li {
   font-size: 20px;
   line-height: 24px;
   /* identical to box height */
-  padding-top: 26px;
+  padding-top: 30px;
 
   color: #ffffff;
 }
