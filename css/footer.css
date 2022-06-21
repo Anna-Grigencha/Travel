@@ -23,7 +23,7 @@
   color: #ffffff;
 }
 
-.wrapper-social {
+.footer-list {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,10 +32,10 @@
 }
 
 .instagram {
-  width: 30.85px;
-  height: 30.85px;
+  width: 33.65px;
+  height: 33.65px;
   background-image: url("../assets/svg/instagram.svg");
-  background-position: center;
+  background-position-y: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -50,9 +50,14 @@
 }
 
 .twitter {
-  width: 31.84px;
-  height: 25.88px;
+  width: 33.65px;
+  height: 33.65px;
   background-image: url("../assets/svg/twitter.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+.footer-link {
+  display: flex;
 }
