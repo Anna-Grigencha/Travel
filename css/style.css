@@ -19,6 +19,10 @@ ul {
   margin: 0px;
 }
 
+li {
+  margin: 0px;
+}
+
 p {
   margin: 0px;
 }
@@ -64,8 +68,6 @@ p {
   display: flex;
   gap: 6px;
   align-items: center;
-  /*margin-left: 120px;*/
-  width: 216px;
 }
 
 .logo-icon {
