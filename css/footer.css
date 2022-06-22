@@ -1,12 +1,8 @@
 .wrapper-footer {
   background-image: url("../assets/img/bg-stories_height1331.jpg");
-  /*background-size: 100%;*/
   background-position: center -1270px;
   background-repeat: no-repeat;
   height: 61px;
-
-  /*background-size: 100%;*/
-  /*width: 1445px;*/
   display: flex;
   align-items: center;
   width: 100%;

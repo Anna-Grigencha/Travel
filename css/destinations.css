@@ -45,6 +45,7 @@
   height: 20px;
 
   background: rgba(242, 120, 92, 0.5);
+  border-radius: 50%;
 }
 
 .ellipse.ellipse-active {
