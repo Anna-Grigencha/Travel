@@ -38,6 +38,7 @@
   font-size: 35px;
   line-height: 42px;
   /* identical to box height */
+  margin-bottom: 24px;
 
   color: #0d606f;
 }
@@ -57,7 +58,7 @@
 .text-story {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  /*gap: 24px;*/
   width: 100%;
 }
 
@@ -100,4 +101,9 @@
   background-image: url("../assets/svg/arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.story.underline-text {
+  text-decoration: underline;
+  font-weight: bold;
 }
