@@ -25,12 +25,16 @@
   background-image: url("../assets/img/Japan.jpg");
   height: 800px;
   width: 800px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .slide3 {
   background-image: url("../assets/img/USA.jpg");
   height: 800px;
   width: 260px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .controls {
@@ -83,4 +87,16 @@
   background-image: url("../assets/svg/arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.name-slide {
+  font-family: "Red Hat Text";
+  font-style: medium;
+  font-size: 32px;
+  line-height: 42px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  margin-left: 15px;
+  margin-bottom: 40px;
+  margin-left: 15px;
 }
