@@ -44,6 +44,7 @@ p {
 }
 
 .header-wrapper {
+  position: relative;
   max-width: 1440px;
   height: 100%;
   background: rgba(242, 120, 92, 0.7);
@@ -75,7 +76,6 @@ p {
   background-image: url("../assets/svg/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  
 }
 
 .logo-text {

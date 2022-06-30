@@ -3,13 +3,14 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  width: 100%;
 }
 
 .background-stories {
   background-image: url("../assets/img/bg-stories.jpg");
   /*background-size: 100%;*/
-  width: 1445px;
-  height: 1270px;
+  /*width: 1445px;
+  height: 1270px;*/
 }
 
 .wrapper-stories {
