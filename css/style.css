@@ -110,6 +110,7 @@ p {
 
 .button:hover {
   background: #f2785c;
+  transition: all 0.5s ease 0s;
 }
 
 .button:active {
@@ -142,6 +143,7 @@ li {
 
 .header-link:hover {
   color: #0d606f;
+  transition: all 0.5s ease 0s;
 }
 
 .header-link:active {
