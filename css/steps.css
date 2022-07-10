@@ -7,6 +7,8 @@
 }
 
 .steps-container {
+  padding-left: 131px;
+  padding-right: 132px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,29 +16,18 @@
   width: 100%;
 }
 
-.name-section {
-  font-family: "Red Hat Text";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 53px;
-  /* identical to box height */
-
-  color: #f2785c;
-}
-
 .wrapper-steps {
-  padding-left: 131px;
-  padding-right: 132px;
+  width: 100%;
+  /* padding-left: 131px;
+  padding-right: 132px;*/
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
+  justify-content: space-between;
   font-family: "Aleo";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  /* identical to box height */
-
   color: #0d606f;
 }
 
@@ -45,14 +36,16 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  width: 33.33%;
+  align-items: center;
 }
 
 .step2 {
-  margin-left: 231px;
+  /* margin-left: 231px;*/
 }
 
 .step3 {
-  margin-left: 160px;
+  /*  margin-left: 160px;*/
 }
 
 .background-step {
@@ -87,4 +80,95 @@
   background-image: url("../assets/svg/Vector-step3.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.description-steps-390px {
+  display: none;
+}
+
+@media screen and (max-width: 390px) {
+  .section-steps {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .steps-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .wrapper-steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-family: "Aleo";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #0d606f;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 19px;
+    width: 33.33%;
+  }
+
+  .step2 {
+    margin-left: 0px;
+    align-items: center;
+  }
+
+  .step3 {
+    margin-left: 0px;
+    align-items: flex-end;
+  }
+
+  .step.step3 {
+    align-items: flex-end;
+  }
+
+  .background-step {
+    width: 70px;
+    height: 70px;
+    background: #f2785c;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-step1 {
+    width: 35px;
+    height: 31.5px;
+  }
+
+  .image-step2 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .image-step3 {
+    width: 40px;
+    height: 30px;
+  }
+
+  .description-steps-390px {
+    display: block;
+  }
+
+  .description-steps {
+    display: none;
+  }
 }

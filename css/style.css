@@ -19,6 +19,10 @@ ul {
   margin: 0px;
 }
 
+button {
+  padding: 0px;
+}
+
 li {
   margin: 0px;
 }
@@ -220,4 +224,279 @@ li {
   font-size: 40px;
   line-height: 53px;
   color: #f2785c;
+}
+
+.burger {
+  display: none;
+}
+
+.burger-line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #f1cdb3;
+  transition-duration: 0.25s;
+  top: 10px;
+  z-index: 100;
+}
+
+.burger-line::before {
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 2px;
+  content: "";
+  background-color: #f1cdb3;
+  transition-duration: 0.25s;
+}
+
+.burger-line::after {
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 2px;
+  content: "";
+  background-color: #f1cdb3;
+  transition-duration: 0.25s;
+}
+
+@media screen and (max-width: 390px) {
+  .burger {
+    display: block;
+    position: relative;
+    transition-duration: 1s;
+    /*top: 51px;*/
+    right: 24.38px;
+    width: 26.25px;
+    height: 16px;
+
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .header-nav {
+    position: fixed;
+    top: 0px;
+    right: -390px;
+    /* padding-top: 120px;*/
+    width: 165px;
+    height: 250px;
+    background-color: #f2785c;
+    z-index: 10;
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+    border-radius: 10px;
+    transform: translateX(100%);
+    transition: 0.5s all linear;
+  }
+
+  .header-nav.open-header-nav {
+    transition: 0.5s;
+    transform: translateX(0);
+    right: 0px;
+  }
+
+  .burger.open-header-nav {
+    transform: rotateZ(90deg);
+  }
+
+  body.open-header-nav {
+    overflow: hidden;
+  }
+
+  .dark-bg.open-header-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: rgba(41, 41, 41, 0.6);
+  }
+
+  .content {
+    max-width: 390px;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .header-container {
+    background-image: url("../assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 1_390px.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    max-width: 390px;
+    margin: 0 auto;
+    height: 102px;
+  }
+
+  .header-wrapper {
+    position: relative;
+    max-width: 390px;
+    height: 100%;
+    background: none;
+    box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 20px;
+  }
+
+  .section-preview {
+    background-image: url("../assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 1_390px.jpg");
+    background-position: center -102px;
+    background-repeat: no-repeat;
+    height: 149px;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .logo-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url("../assets/svg/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .header-nav {
+    /*padding-left: 158px;*/
+  }
+
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #0d606f;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+      0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background: #f2785c;
+    transition: all 0.5s ease 0s;
+  }
+
+  .button:active {
+    color: #f2785c;
+    background: #0d606f;
+  }
+
+  .button-login {
+    display: none;
+    width: 103px;
+    height: 41px;
+    font-size: 16px;
+    line-height: 21px;
+    /*margin-left: 19px;*/
+    margin-left: 30px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .header-link {
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .header-link:hover {
+    color: #0d606f;
+    transition: all 0.5s ease 0s;
+  }
+
+  .header-link:active {
+    color: #f2785c;
+  }
+
+  .header-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+  }
+
+  .h1 {
+    display: none;
+    font-family: "Aleo";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    color: #ffffff;
+  }
+
+  .wrapper-start-planning {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 48px;
+    margin-top: 40px;
+    align-items: center;
+    padding-left: 16.55px;
+    padding-right: 9px;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: space-between;
+  }
+
+  .wrapper-preview {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+
+  .description-preview {
+    display: none;
+  }
+
+  .question-start-planning {
+    font-family: "Aleo";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #f2785c;
+  }
+
+  .button-start-planing {
+    width: 92px;
+    height: 30px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .name-section {
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #f2785c;
+  }
 }
