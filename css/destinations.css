@@ -6,10 +6,11 @@
 }
 
 .wrapper-slider {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   gap: 60px;
 
   padding-top: 46px;
@@ -20,6 +21,12 @@
   height: 800px;
   width: 260px;
 }
+
+/*.test {
+  background-image: url("../assets/img/Spain.jpg");
+  width: 100%;
+  height: 100%;
+}*/
 
 .slide2 {
   background-image: url("../assets/img/Japan.jpg");
@@ -101,6 +108,18 @@
   margin-left: 15px;
 }
 
+.name-slide-390px {
+  display: none;
+}
+
+.controls-390px {
+  display: none;
+}
+
+.arrows-slider {
+  display: none;
+}
+
 @media screen and (max-width: 390px) {
   .section-destinations {
     display: flex;
@@ -113,7 +132,7 @@
   .wrapper-slider {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 0px;
 
@@ -125,6 +144,9 @@
     height: 210px;
     width: 360px;
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .slide2 {
@@ -145,22 +167,23 @@
 
   .controls {
     margin-top: 24px;
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 10px;
   }
 
   .ellipse {
-    width: 20px;
-    height: 20px;
+    width: 8px;
+    height: 8px;
 
     background: rgba(242, 120, 92, 0.5);
     border-radius: 50%;
   }
 
   .ellipse.ellipse-active {
-    width: 20px;
-    height: 20px;
+    width: 8px;
+    height: 8px;
+    order: -1;
 
     background: #f2785c;
   }
@@ -199,5 +222,55 @@
     margin-left: 15px;
     margin-bottom: 40px;
     margin-left: 15px;
+  }
+
+  .name-slide-390px {
+    display: block;
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #ffffff;
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+
+  .controls-390px {
+    display: block;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .arrows-slider {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 11.27px;
+    padding-right: 11.27px;
+  }
+
+  .arrow-left-slide {
+    width: 14.36px;
+    height: 24.94px;
+    background-image: url("../assets/svg/arrow-slide-left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background: rgba(242, 120, 92, 0.5);*/
+    /*transform: rotate(-90deg);*/
+  }
+
+  .arrow-right-slide {
+    width: 14.36px;
+    height: 24.94px;
+    background-image: url("../assets/svg/arrow-slide-right.svg");
+
+    /*background-color: #ffffff;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*background: rgba(242, 120, 92, 0.5);*/
+    /*transform: rotate(-90deg);*/
   }
 }
