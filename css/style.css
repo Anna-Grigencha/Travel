@@ -357,6 +357,7 @@ li {
   }
 
   .logo-icon {
+    margin-top: 20px;
     width: 30px;
     height: 30px;
     background-image: url("../assets/svg/logo.svg");
