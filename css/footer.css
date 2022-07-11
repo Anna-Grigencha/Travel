@@ -5,7 +5,7 @@
   height: 61px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   width: 100%;
   /*justify-content: center;*/
   justify-content: flex-end;
@@ -64,6 +64,12 @@
   display: flex;
 }
 
+@media screen and (max-width: 768px) {
+  .rights {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 390px) {
   .wrapper-footer {
     background-image: url("../assets/img/bg-stories-390.jpg");
@@ -72,7 +78,7 @@
     height: 65px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     width: 100%px;
     justify-content: center;
     gap: 0px;
