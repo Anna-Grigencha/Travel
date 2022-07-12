@@ -22,12 +22,6 @@
   width: 260px;
 }
 
-/*.test {
-  background-image: url("../assets/img/Spain.jpg");
-  width: 100%;
-  height: 100%;
-}*/
-
 .slide2 {
   background-image: url("../assets/img/Japan.jpg");
   height: 800px;
@@ -83,8 +77,6 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
-  /* identical to box height */
-
   color: #ffffff;
 }
 
@@ -258,19 +250,13 @@
     background-image: url("../assets/svg/arrow-slide-left.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    /* background: rgba(242, 120, 92, 0.5);*/
-    /*transform: rotate(-90deg);*/
   }
 
   .arrow-right-slide {
     width: 14.36px;
     height: 24.94px;
     background-image: url("../assets/svg/arrow-slide-right.svg");
-
-    /*background-color: #ffffff;*/
     background-size: contain;
     background-repeat: no-repeat;
-    /*background: rgba(242, 120, 92, 0.5);*/
-    /*transform: rotate(-90deg);*/
   }
 }
