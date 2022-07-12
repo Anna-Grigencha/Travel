@@ -273,7 +273,7 @@ li {
 
 @media screen and (max-width: 390px) {
   .burger {
-    padding-top: 20px;
+    padding-top: 17px;
     display: block;
     position: relative;
     transition-duration: 1s;
@@ -342,7 +342,7 @@ li {
     justify-content: space-between;
     align-items: center;
     padding-left: 16px;
-    padding-right: 20px;
+    padding-right: 17px;
   }
 
   .section-preview {
@@ -516,9 +516,9 @@ li {
     display: block;
     width: 15px;
     height: 15px;
-    margin-top: 23px;
-    margin-left: 23px;
-    margin-bottom: 21px;
+    margin-top: 15.45px;
+    margin-left: 15.45px;
+    margin-bottom: 13.46px;
     z-index: 11;
     position: absolute;
   }
