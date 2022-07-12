@@ -127,7 +127,6 @@ p {
   height: 41px;
   font-size: 16px;
   line-height: 21px;
-  /*margin-left: 19px;*/
   margin-left: 30px;
 }
 
@@ -237,7 +236,7 @@ li {
   background-color: #ffffff;
   transition-duration: 0.25s;
   /* top: 6.67px;*/
-  z-index: 100;
+  /*z-index: 100;*/
 }
 
 .burger-line::before {
@@ -260,28 +259,32 @@ li {
   transition-duration: 0.25s;
 }
 
+.header-link-account {
+  display: none;
+}
+
+.header-link-social-media {
+  display: none;
+}
+
+.header-nav-close {
+  display: none;
+}
+
 @media screen and (max-width: 390px) {
   .burger {
     padding-top: 20px;
     display: block;
     position: relative;
     transition-duration: 1s;
-    /*top: 51px;*/
-    /* right: 24.38px;*/
-    /*justify-content: center;
-    align-items: center;*/
     width: 35px;
-    /*height: 12.01px;*/
-
     cursor: pointer;
-    z-index: 100;
   }
 
   .header-nav {
     position: fixed;
     top: 0px;
     right: -390px;
-    /* padding-top: 120px;*/
     width: 165px;
     height: 250px;
     background-color: #f2785c;
@@ -296,10 +299,6 @@ li {
     transition: 0.5s;
     transform: translateX(0);
     right: 0px;
-  }
-
-  .burger.open-header-nav {
-    transform: rotateZ(90deg);
   }
 
   body.open-header-nav {
@@ -373,7 +372,6 @@ li {
   }
 
   .header-nav {
-    /*padding-left: 158px;*/
   }
 
   .button {
@@ -408,7 +406,6 @@ li {
     height: 41px;
     font-size: 16px;
     line-height: 21px;
-    /*margin-left: 19px;*/
     margin-left: 30px;
   }
 
@@ -441,6 +438,7 @@ li {
     gap: 10px;
     justify-content: flex-end;
     padding-right: 15px;
+    padding-top: 44px;
   }
 
   .h1 {
@@ -504,5 +502,41 @@ li {
     font-size: 14px;
     line-height: 19px;
     color: #f2785c;
+  }
+
+  .header-link-account {
+    display: block;
+  }
+
+  .header-link-social-media {
+    display: block;
+  }
+
+  .header-nav-close {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-top: 23px;
+    margin-left: 23px;
+    margin-bottom: 21px;
+    z-index: 11;
+    position: absolute;
+  }
+
+  .header-nav-close-line {
+    width: 100%;
+    display: block;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    position: absolute;
+  }
+
+  .header-nav-close-line:first-child {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .header-nav-close-line:last-child {
+    transform: translateY(-50%) rotate(-45deg);
   }
 }

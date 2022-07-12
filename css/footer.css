@@ -65,8 +65,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .rights {
-    display: none;
+  .wrapper-footer {
+    gap: 30px;
   }
 }
 
@@ -78,7 +78,6 @@
     height: 65px;
     display: flex;
     align-items: center;
-    /*flex-wrap: wrap;*/
     width: 100%px;
     justify-content: center;
     gap: 0px;
@@ -86,7 +85,6 @@
 
   .rights {
     display: none;
-    /*margin-left: 590px;*/
     align-items: center;
     font-family: "Red Hat Text";
     font-style: normal;
