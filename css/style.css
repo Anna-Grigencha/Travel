@@ -54,7 +54,7 @@ p {
   background: rgba(242, 120, 92, 0.7);
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   justify-content: space-between;
   align-items: center;
   padding-left: 120px;
@@ -269,6 +269,42 @@ li {
 
 .header-nav-close {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header-wrapper {
+    padding-left: 16px;
+    padding-right: 17px;
+  }
+  .button-login {
+    margin-left: 10px;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .header-list {
+    gap: 10px;
+  }
+
+  .wrapper-preview {
+    padding-left: 16px;
+    padding-right: 17px;
+  }
+
+  .h1 {
+    font-size: 40px;
+    line-height: 46px;
+  }
 }
 
 @media screen and (max-width: 390px) {
