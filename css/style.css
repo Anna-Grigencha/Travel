@@ -232,11 +232,9 @@ li {
 .burger-line {
   position: absolute;
   width: 26.25px;
-  height: 2.67px;
+  height: 3.67px;
   background-color: #ffffff;
   transition-duration: 0.25s;
-  /* top: 6.67px;*/
-  /*z-index: 100;*/
 }
 
 .burger-line::before {
@@ -251,7 +249,7 @@ li {
 
 .burger-line::after {
   position: absolute;
-  top: 6.9px;
+  top: 7.9px;
   width: 26.25px;
   height: 2.67px;
   content: "";
@@ -509,6 +507,7 @@ li {
     flex-direction: column;
     padding-top: 0px;
     padding-left: 0px;
+    padding-right: 0px;
   }
 
   .description-preview {
