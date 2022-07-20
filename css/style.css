@@ -21,10 +21,17 @@ ul {
 
 button {
   padding: 0px;
+  border-width: 0px;
 }
 
 li {
   margin: 0px;
+}
+
+input {
+  margin: 0px;
+  padding: 0px;
+  border-width: 0px;
 }
 
 p {
