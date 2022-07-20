@@ -77,3 +77,9 @@ const contentPopUp = document.querySelector(".content-pop-up");
     contentPopUp.classList.add("open-register");
   });
 })();
+
+(function () {
+  contentPopUp.addEventListener("click", () => {
+    btnContinueWithFacebook.classList.add("open-register");
+  });
+})();
