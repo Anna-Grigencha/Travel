@@ -258,5 +258,8 @@
     background-image: url("../assets/svg/arrow-slide-right.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
