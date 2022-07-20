@@ -37,3 +37,43 @@ const menuLinks = document.querySelectorAll(".header-link");
     darkBackgraund.classList.remove("open-header-nav");
   });
 })();
+
+const login = document.querySelector(".button-login");
+const popUp = document.querySelector(".pop-up");
+
+(function () {
+  login.addEventListener("click", () => {
+    popUp.classList.add("open-pop-up");
+  });
+})();
+
+const register = document.querySelector(".register");
+const btnContinueWithFacebook = document.querySelector(
+  ".btn-continue-with-facebook"
+);
+const btnContinueWithGoogle = document.querySelector(
+  ".btn-continue-with-google"
+);
+const groupOR = document.querySelector(".group-or");
+const forgotYourPassword = document.querySelector(".forgot-your-password");
+const contentPopUp = document.querySelector(".content-pop-up");
+
+(function () {
+  register.addEventListener("click", () => {
+    btnContinueWithFacebook.classList.add("open-register");
+  });
+  register.addEventListener("click", () => {
+    btnContinueWithGoogle.classList.add("open-register");
+  });
+  register.addEventListener("click", () => {
+    groupOR.classList.add("open-register");
+  });
+
+  register.addEventListener("click", () => {
+    forgotYourPassword.classList.add("open-register");
+  });
+
+  register.addEventListener("click", () => {
+    contentPopUp.classList.add("open-register");
+  });
+})();
