@@ -343,7 +343,7 @@ li {
   background: #ffffff;
 }
 
-.btn-continue-with-google {
+.btn-continue-with-google.open-register {
   display: none;
 }
 
