@@ -294,6 +294,10 @@ li {
   top: 0px;
 }
 
+body.open-pop-up {
+  overflow: hidden;
+}
+
 .content-pop-up {
   width: 650px;
   height: 660px;
@@ -303,8 +307,8 @@ li {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /*padding-left: 45px;
-  padding-right: 45px;*/
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .content-pop-up.open-register {
@@ -328,7 +332,8 @@ li {
   justify-content: center;
   align-items: center;
   gap: 15.5px;
-  width: 560px;
+  /* width: 560px;*/
+  width: 100%;
   height: 56px;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
     0px 2px 3px rgba(13, 96, 111, 0.16);
@@ -401,6 +406,8 @@ li {
 .group-or {
   margin-top: 30px;
   margin-bottom: 10px;
+  width: 100%;
+
   display: flex;
   gap: 9px;
   align-items: center;
@@ -411,7 +418,8 @@ li {
 }
 
 .or-line {
-  width: 261px;
+  width: 50%;
+
   border: 1px solid rgba(13, 96, 111, 0.5);
 }
 
@@ -426,7 +434,7 @@ li {
 
 .title-input-type-text {
   /*margin-top: 10px;*/
-  margin-left: 45px;
+  /*margin-left: 45px;*/
   font-family: "Aleo";
   font-style: normal;
   font-weight: 400;
@@ -443,7 +451,8 @@ li {
 
 .input-type-text {
   margin-top: 5px;
-  width: 560px;
+  /*width: 560px;*/
+  width: 100%;
   height: 54px;
   background: #ffffff;
   box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08),
@@ -469,7 +478,8 @@ li {
 
 .pop-up-line {
   margin-top: 26px;
-  width: 560px;
+  /*max-width: 560px;*/
+  width: 100%;
   border: 1px solid rgba(13, 96, 111, 0.5);
   transform: rotate(0.1deg);
 }

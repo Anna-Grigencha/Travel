@@ -5,6 +5,7 @@ const body = document.querySelector(".body");
 const darkBackgraund = document.querySelector(".dark-bg");
 const menuLinks = document.querySelectorAll(".header-link");
 const login = document.querySelector(".button-login");
+const account = document.querySelector(".account");
 const popUp = document.querySelector(".pop-up");
 const register = document.querySelector(".register");
 const btnContinueWithFacebook = document.querySelector(
@@ -56,6 +57,14 @@ const havingAnAccount = document.querySelector(".having-an-account");
 (function () {
   login.addEventListener("click", () => {
     popUp.classList.add("open-pop-up");
+    body.classList.add("open-pop-up");
+  });
+})();
+
+(function () {
+  account.addEventListener("click", () => {
+    popUp.classList.add("open-pop-up");
+    body.classList.add("open-pop-up");
   });
 })();
 
@@ -88,6 +97,7 @@ const havingAnAccount = document.querySelector(".having-an-account");
 popUp.addEventListener("click", (event) => {
   if (event.target.classList.contains("open-pop-up")) {
     popUp.classList.remove("open-pop-up");
+    body.classList.remove("open-pop-up");
     btnContinueWithFacebook.classList.remove("open-register");
     btnContinueWithGoogle.classList.remove("open-register");
     groupOR.classList.remove("open-register");
