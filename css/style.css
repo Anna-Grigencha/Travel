@@ -400,6 +400,7 @@ li {
 
 .group-or {
   margin-top: 30px;
+  margin-bottom: 10px;
   display: flex;
   gap: 9px;
   align-items: center;
@@ -424,7 +425,7 @@ li {
 }
 
 .title-input-type-text {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   margin-left: 45px;
   font-family: "Aleo";
   font-style: normal;
@@ -477,6 +478,10 @@ li {
   text-decoration: none;
 }
 
+.text-decoration-none:visited {
+  color: #0d606f;
+}
+
 a:hover {
   cursor: pointer;
 }
@@ -495,6 +500,7 @@ a:hover {
 .register {
   text-decoration-line: underline;
   color: #0d606f;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
