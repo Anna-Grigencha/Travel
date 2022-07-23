@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;373;400;500;600;700;800&family=Magra:wght@400;700&family=Merriweather:wght@700&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Aleo:wght@400;700&family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100;200;300;373;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;373;400;500;600;700;800&family=Magra:wght@400;700&family=Merriweather:wght@700&family=Red+Hat+Text:wght@400&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Aleo:wght@400;700&family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100;200;300;373;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -331,9 +331,17 @@
             <div class="or-line"></div>
           </div>
           <label class="title-input-type-text">E-mail</label>
-          <input type="text" name="e-mail" class="input-type-text" />
+          <input
+            type="text"
+            name="e-mail"
+            class="input-type-text input-email"
+          />
           <label class="title-input-type-text text-password">Password</label>
-          <input type="text" name="password" class="input-type-text" />
+          <input
+            type="text"
+            name="password"
+            class="input-type-text input-password"
+          />
           <input
             type="submit"
             name="sign-in"
@@ -345,7 +353,8 @@
           </div>
           <div class="pop-up-line"></div>
           <div class="wrapper-register">
-            <span>Don’t have an account?</span>
+            <span class="having-an-account">Don’t have an account?</span>
+
             <span class="register">
               <a class="text-decoration-none" href="#">Register</a>
             </span>
