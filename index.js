@@ -54,6 +54,8 @@ const havingAnAccount = document.querySelector(".having-an-account");
   });
 })();
 
+//попап
+
 (function () {
   login.addEventListener("click", () => {
     popUp.classList.add("open-pop-up");
@@ -119,3 +121,34 @@ popUp.addEventListener("click", (event) => {
     alert(`${email} ${password}`);
   });
 })();
+
+//слайдер
+
+let ellipse = document.querySelector(".ellipse");
+let slider = document.querySelector(".slider");
+let activeControl = 0;
+
+//for (let i = 0; i < controls.length; i++) {
+//let control = controls[i];
+//control.addEventListener("click", setClickedItem, false);
+//control.ItemID = i;
+//}
+
+// устанавливаем первый элемент в качестве активного
+//controls[activeControl].classList.add("active");
+ellipse.classList.add("active");
+
+//function setClickedItem(e) {
+//removeActiveLinks();
+
+//let clickedLink = e.target;
+//activeControl = clickedLink.itemID;
+
+//changePosition(clickedLink);
+//}
+
+//function removeActiveLinks() {
+//for (let i = 0; i < controls.length; i++) {
+//controls.classList.remove("active");
+//}
+//}
