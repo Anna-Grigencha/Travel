@@ -27,7 +27,7 @@
   height: 800px;
   width: 800px;
   display: flex;
-  align-items: flex-end;
+  align-items: ;
 }
 
 .slide3 {
@@ -112,7 +112,27 @@
   display: none;
 }
 
+/* слайдер*/
+.viewport {
+  display: flex;
+  justify-content: center;
+  /*width: 100vw;*/
+  width: 100%;
+  /*width: 1440px;*/
+  /*height: 450px;*/
+  overflow: hidden;
+}
+
 @media screen and (max-width: 390px) {
+  .viewport {
+    display: flex;
+    justify-content: center;
+    /*width: 100vw;*/
+    width: 360px;
+    /*height: 450px;*/
+    overflow: hidden;
+  }
+
   .section-destinations {
     display: flex;
     flex-direction: column;
@@ -129,32 +149,67 @@
     gap: 0px;
 
     padding-top: 20px;
+
+    /* новое*/
+    /*max-width: 360px;*/
+    width: 1080px;
+    height: 210px;
+    position: relative;
+    transition: 500ms;
   }
 
-  .slide1 {
-    background-image: url("../assets/img/Spain_390.jpg");
+  .slide {
+    width: 100%;
     height: 210px;
-    width: 360px;
+
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 210px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    object-fit: cover;
+    object-position: 0;
+  }
+
+  .slide.active {
+    display: flex;
+  }
+
+  .slide.unactive {
+    display: none;
+  }
+
+  .slide1 {
+    background-image: url("../assets/img/Spain_390.jpg");
+    /*background-repeat: no-repeat;
+    width: 100%;
+    height: 210px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    object-fit: cover;
+    object-position: 0;*/
   }
 
   .slide2 {
-    background-image: url("../assets/img/Japan.jpg");
-    height: 800px;
-    width: 800px;
-    display: none;
-    align-items: flex-end;
+    background-image: url("../assets/img/Japan-390px.jpg");
+    /*background-repeat: no-repeat;
+    width: 100%;
+    height: 210px;
+    
+    align-items: center;*/
   }
 
   .slide3 {
-    background-image: url("../assets/img/USA.jpg");
-    height: 800px;
-    width: 260px;
-    display: none;
-    align-items: flex-end;
+    background-image: url("../assets/img/USA-390px.jpg");
+    /*background-repeat: no-repeat;
+    width: 100%;
+    height: 210px;*/
+
+    align-items: normal;
   }
 
   .controls {
@@ -172,10 +227,10 @@
     border-radius: 50%;
   }
 
-  .ellipse.ellipse-active {
-    width: 8px;
+  .ellipse.active {
+    /* width: 8px;
     height: 8px;
-    order: -1;
+    order: -1;*/
 
     background: #f2785c;
   }
@@ -250,16 +305,33 @@
     background-image: url("../assets/svg/arrow-slide-left.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    /*background: rgba(242, 120, 92, 0.5);*/
   }
 
   .arrow-right-slide {
     width: 14.36px;
     height: 24.94px;
-    background-image: url("../assets/svg/arrow-slide-right.svg");
+    background-image: url("../assets/svg/arrow-right-anactive.svg");
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .arrow-right-slide.unactive {
+    background-image: url("../assets/svg/arrow-right-anactive.svg");
+  }
+
+  .arrow-right-slide.active {
+    background-image: url("../assets/svg/arrow-slide-right-active.svg");
+  }
+
+  .arrow-left-slide.active {
+    background-image: url("../assets/svg/arrow-slide-left-active.svg");
+  }
+
+  .arrow-left-slide.unactive {
+    background-image: url("../assets/svg/arrow-slide-left.svg");
   }
 }
