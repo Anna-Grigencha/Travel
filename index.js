@@ -124,31 +124,64 @@ popUp.addEventListener("click", (event) => {
 
 //слайдер
 
-let ellipse = document.querySelector(".ellipse");
-let slider = document.querySelector(".slider");
-let activeControl = 0;
+// Получаем видимую часть слайда
+let viewport = document.querySelector(".viewport").offsetWidth;
+// Получаем кнопку вперёд
+let btnNext = document.querySelectorAll(".arrow-right-slide");
+// Получаем кнопку назад
+let btnPrev = document.querySelectorAll(".arrow-left-slide");
+// Получаем элемент со всеми слайдами
+let slides = document.querySelectorAll(".slide");
+// Получаем элементы показа слайда
+let viewSliders = document.querySelectorAll(".ellipse");
+/*let idx = 0;*/
 
-//for (let i = 0; i < controls.length; i++) {
-//let control = controls[i];
-//control.addEventListener("click", setClickedItem, false);
-//control.ItemID = i;
-//}
+slides[0].classList.add("active");
+btnNext[0].classList.add("active");
+viewSliders[0].classList.add("active");
 
-// устанавливаем первый элемент в качестве активного
-//controls[activeControl].classList.add("active");
-ellipse.classList.add("active");
+(function () {
+  for (let i = 0; i < btnNext.length - 1; i += 1) {
+    btnNext[i].addEventListener("click", () => {
+      slides[i].classList.add("unactive");
+      slides[i].classList.remove("active");
+      slides[i + 1].classList.add("active");
+      slides[i + 1].classList.remove("unactive");
+      btnNext[i + 1].classList.add("active");
 
-//function setClickedItem(e) {
-//removeActiveLinks();
+      if (i === 0) {
+        viewSliders[i + 4].classList.add("active");
+        viewSliders[i].classList.remove("active");
+      }
 
-//let clickedLink = e.target;
-//activeControl = clickedLink.itemID;
+      if (i === 1) {
+        btnNext[2].classList.add("unactive");
+        btnNext[2].classList.remove("active");
+        btnPrev[2].classList.add("active");
+        viewSliders[i + 7].classList.add("active");
+        viewSliders[i].classList.remove("active");
+      }
+    });
+  }
 
-//changePosition(clickedLink);
-//}
+  for (let i = btnPrev.length - 1; i > 0; i = i - 1) {
+    btnPrev[i].addEventListener("click", () => {
+      slides[i].classList.add("unactive");
+      slides[i].classList.remove("active");
+      slides[i - 1].classList.add("active");
+      slides[i - 1].classList.remove("unactive");
 
-//function removeActiveLinks() {
-//for (let i = 0; i < controls.length; i++) {
-//controls.classList.remove("active");
-//}
-//}
+      if (i === 2) {
+        btnNext[1].classList.add("active");
+        btnPrev[1].classList.remove("unactive");
+        btnPrev[1].classList.add("active");
+        viewSliders[i - 4].classList.add("active");
+        viewSliders[i].classList.remove("active");
+      }
+      if (i === 1) {
+        viewSliders[i - 1].classList.add("active");
+        viewSliders[i].classList.remove("active");
+      }
+    });
+  }
+})();
