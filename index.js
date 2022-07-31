@@ -126,62 +126,61 @@ popUp.addEventListener("click", (event) => {
 
 // Получаем видимую часть слайда
 let viewport = document.querySelector(".viewport").offsetWidth;
-// Получаем кнопку вперёд
-let btnNext = document.querySelectorAll(".arrow-right-slide");
-// Получаем кнопку назад
-let btnPrev = document.querySelectorAll(".arrow-left-slide");
-// Получаем элемент со всеми слайдами
-let slides = document.querySelectorAll(".slide");
-// Получаем элементы показа слайда
-let viewSliders = document.querySelectorAll(".ellipse");
-/*let idx = 0;*/
+let btnNext = document.querySelector(".arrow-right-slide");
+let btnPrev = document.querySelector(".arrow-left-slide");
 
-slides[0].classList.add("active");
-btnNext[0].classList.add("active");
-viewSliders[0].classList.add("active");
+btnNext.classList.add("active");
+btnPrev.classList.add("active");
 
 (function () {
-  for (let i = 0; i < btnNext.length - 1; i += 1) {
-    btnNext[i].addEventListener("click", () => {
-      slides[i].classList.add("unactive");
-      slides[i].classList.remove("active");
-      slides[i + 1].classList.add("active");
-      slides[i + 1].classList.remove("unactive");
-      btnNext[i + 1].classList.add("active");
+  btnPrev.addEventListener("click", () => {
+    let slides1 = document.getElementsByClassName("slide"); // коллекция элементов с классом slide
+    let viewSliders = document.getElementsByClassName("ellipse");
+    for (let value in slides1) {
+      //перебирам все свойства объекта
+      let slide = slides1[value]; //значение объекта
+      let ellipse = viewSliders[value];
+      if (slide.classList.contains("active")) {
+        // если slide имеет класс active
+        slide.classList.remove("active");
+        slide.classList.add("unactive");
+        ellipse.classList.remove("active");
+        ellipse.classList.add("unactive");
 
-      if (i === 0) {
-        viewSliders[i + 4].classList.add("active");
-        viewSliders[i].classList.remove("active");
-      }
+        let index =
+          parseInt(value) === 0 ? slides1.length - 1 : parseInt(value) - 1; // если свойство равно 0, то индекс равен последнему элементу, иначе предыдущему
 
-      if (i === 1) {
-        btnNext[2].classList.add("unactive");
-        btnNext[2].classList.remove("active");
-        btnPrev[2].classList.add("active");
-        viewSliders[i + 7].classList.add("active");
-        viewSliders[i].classList.remove("active");
-      }
-    });
-  }
+        slides1[index].classList.add("active");
+        slides1[index].classList.remove("unactive");
+        viewSliders[index].classList.add("active");
+        viewSliders[index].classList.remove("unactive");
 
-  for (let i = btnPrev.length - 1; i > 0; i = i - 1) {
-    btnPrev[i].addEventListener("click", () => {
-      slides[i].classList.add("unactive");
-      slides[i].classList.remove("active");
-      slides[i - 1].classList.add("active");
-      slides[i - 1].classList.remove("unactive");
+        break;
+      }
+    }
+  });
 
-      if (i === 2) {
-        btnNext[1].classList.add("active");
-        btnPrev[1].classList.remove("unactive");
-        btnPrev[1].classList.add("active");
-        viewSliders[i - 4].classList.add("active");
-        viewSliders[i].classList.remove("active");
+  btnNext.addEventListener("click", () => {
+    let slides1 = document.getElementsByClassName("slide");
+    let viewSliders = document.getElementsByClassName("ellipse");
+    for (let value in slides1) {
+      let slide = slides1[value];
+      let ellipse = viewSliders[value];
+      if (slide.classList.contains("active")) {
+        slide.classList.remove("active");
+        slide.classList.add("unactive");
+        ellipse.classList.remove("active");
+        ellipse.classList.add("unactive");
+
+        let index =
+          parseInt(value) === slides1.length - 1 ? 0 : parseInt(value) + 1;
+
+        slides1[index].classList.add("active");
+        slides1[index].classList.remove("unactive");
+        viewSliders[index].classList.add("active");
+        viewSliders[index].classList.remove("unactive");
+        break;
       }
-      if (i === 1) {
-        viewSliders[i - 1].classList.add("active");
-        viewSliders[i].classList.remove("active");
-      }
-    });
-  }
+    }
+  });
 })();
