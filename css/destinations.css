@@ -1,0 +1,342 @@
+.section-destinations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.wrapper-slider {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 60px;
+
+  padding-top: 46px;
+}
+
+.slide1 {
+  background-image: url("../assets/img/Spain.jpg");
+  height: 800px;
+  width: 260px;
+}
+
+.slide2 {
+  background-image: url("../assets/img/Japan.jpg");
+  height: 800px;
+  width: 800px;
+  display: flex;
+  align-items: ;
+}
+
+.slide3 {
+  background-image: url("../assets/img/USA.jpg");
+  height: 800px;
+  width: 260px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.controls {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ellipse {
+  width: 20px;
+  height: 20px;
+
+  background: rgba(242, 120, 92, 0.5);
+  border-radius: 50%;
+}
+
+.ellipse.unactive {
+  background: rgba(242, 120, 92, 0.5);
+}
+
+.button-destinations {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 228px;
+  height: 59px;
+}
+
+.find-more {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+.arrow {
+  width: 35px;
+  height: 22.5px;
+  background-image: url("../assets/svg/arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.name-slide {
+  font-family: "Red Hat Text";
+  font-style: medium;
+  font-size: 32px;
+  line-height: 42px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  margin-left: 15px;
+  margin-bottom: 40px;
+  margin-left: 15px;
+}
+
+.name-slide-390px {
+  display: none;
+}
+
+/*.controls-390px {
+  display: none;
+}*/
+
+.arrows-slider {
+  display: none;
+}
+
+/* слайдер*/
+.viewport {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  /*width: 100vw;*/
+  width: 100%;
+  /*width: 1440px;*/
+  /*height: 450px;*/
+  overflow: hidden;
+}
+
+@media screen and (max-width: 390px) {
+  .viewport {
+    flex-direction: row;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /*width: 100vw;*/
+    width: 360px;
+    /*height: 450px;*/
+    overflow: hidden;
+  }
+
+  .section-destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .wrapper-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+
+    padding-top: 20px;
+
+    /* новое*/
+    /*max-width: 360px;*/
+    width: 1080px;
+    height: 210px;
+    position: relative;
+    transition: 500ms;
+  }
+
+  .slide {
+    width: 100%;
+    height: 210px;
+
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 210px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    object-fit: cover;
+    object-position: 0;
+  }
+
+  .slide.active {
+    display: flex;
+  }
+
+  .slide.unactive {
+    display: none;
+  }
+
+  .slide1 {
+    background-image: url("../assets/img/Spain_390.jpg");
+    /*background-repeat: no-repeat;
+    width: 100%;
+    height: 210px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    object-fit: cover;
+    object-position: 0;*/
+  }
+
+  .slide2 {
+    background-image: url("../assets/img/Japan-390px.jpg");
+    /*background-repeat: no-repeat;
+    width: 100%;
+    height: 210px;
+    
+    align-items: center;*/
+  }
+
+  .slide3 {
+    background-image: url("../assets/img/USA-390px.jpg");
+    /*background-repeat: no-repeat;
+    width: 100%;
+    height: 210px;*/
+
+    align-items: normal;
+  }
+
+  .controls {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    position: absolute;
+    top: 190px;
+  }
+
+  .ellipse {
+    width: 8px;
+    height: 8px;
+
+    background: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
+  }
+
+  .ellipse.active {
+    /* width: 8px;
+    height: 8px;
+    order: -1;*/
+
+    background: #f2785c;
+  }
+
+  .button-destinations {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 92px;
+    height: 30px;
+  }
+
+  .find-more {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .arrow {
+    width: 8.75px;
+    height: 5.63px;
+    background-image: url("../assets/svg/arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .name-slide {
+    font-family: "Red Hat Text";
+    font-style: medium;
+    font-size: 32px;
+    line-height: 42px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+  }
+
+  .name-slide-390px {
+    display: block;
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #ffffff;
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+
+  /* .controls-390px {
+    display: block;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+  }*/
+
+  .arrows-slider {
+    display: flex;
+    justify-content: space-between;
+    left: 11.27px;
+    right: 11.27px;
+    position: absolute;
+    top: 50%;
+    /* width: 100%;*/
+  }
+
+  .arrow-left-slide {
+    width: 14.36px;
+    height: 24.94px;
+    background-image: url("../assets/svg/arrow-slide-left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*background: rgba(242, 120, 92, 0.5);*/
+  }
+
+  .arrow-right-slide {
+    width: 14.36px;
+    height: 24.94px;
+    background-image: url("../assets/svg/arrow-right-anactive.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow-right-slide.unactive {
+    background-image: url("../assets/svg/arrow-right-anactive.svg");
+  }
+
+  .arrow-right-slide.active {
+    background-image: url("../assets/svg/arrow-slide-right-active.svg");
+  }
+
+  .arrow-left-slide.active {
+    background-image: url("../assets/svg/arrow-slide-left-active.svg");
+  }
+
+  .arrow-left-slide.unactive {
+    background-image: url("../assets/svg/arrow-slide-left.svg");
+  }
+}
