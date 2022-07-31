@@ -21,6 +21,8 @@ const titlePopUp = document.querySelector(".name-pop-up");
 const btnSignInUp = document.querySelector(".btn-sign-in");
 const havingAnAccount = document.querySelector(".having-an-account");
 
+//бургер меню
+
 (function () {
   burger.addEventListener("click", () => {
     menu.classList.add("open-header-nav");
