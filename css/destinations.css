@@ -53,11 +53,14 @@
   border-radius: 50%;
 }
 
-.ellipse.ellipse-active {
+/*.ellipse.ellipse-active {
   width: 20px;
   height: 20px;
 
   background: #f2785c;
+}*/
+.ellipse.unactive {
+  background: rgba(242, 120, 92, 0.5);
 }
 
 .button-destinations {
@@ -104,9 +107,9 @@
   display: none;
 }
 
-.controls-390px {
+/*.controls-390px {
   display: none;
-}
+}*/
 
 .arrows-slider {
   display: none;
@@ -114,6 +117,7 @@
 
 /* слайдер*/
 .viewport {
+  flex-direction: column;
   display: flex;
   justify-content: center;
   /*width: 100vw;*/
@@ -125,6 +129,8 @@
 
 @media screen and (max-width: 390px) {
   .viewport {
+    flex-direction: row;
+    position: relative;
     display: flex;
     justify-content: center;
     /*width: 100vw;*/
@@ -213,10 +219,13 @@
   }
 
   .controls {
-    margin-top: 24px;
-    display: none;
+    margin-top: 0px;
+    display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 6px;
+    margin-bottom: 12px;
+    position: absolute;
+    top: 190px;
   }
 
   .ellipse {
@@ -284,19 +293,22 @@
     margin-left: 15px;
   }
 
-  .controls-390px {
+  /* .controls-390px {
     display: block;
     display: flex;
     justify-content: center;
     gap: 6px;
     margin-bottom: 12px;
-  }
+  }*/
 
   .arrows-slider {
     display: flex;
     justify-content: space-between;
-    padding-left: 11.27px;
-    padding-right: 11.27px;
+    left: 11.27px;
+    right: 11.27px;
+    position: absolute;
+    top: 50%;
+    /* width: 100%;*/
   }
 
   .arrow-left-slide {
