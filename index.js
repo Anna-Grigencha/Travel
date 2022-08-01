@@ -150,7 +150,8 @@ btnPrev.classList.add("active");
         ellipse.classList.add("unactive");
 
         let index =
-          parseInt(value) === 0 ? slides1.length - 1 : parseInt(value) - 1; // если свойство равно 0, то индекс равен последнему элементу, иначе предыдущему
+          parseInt(value) === 0 ? slides1.length - 1 : parseInt(value) - 1; //преобразуем свойство value в число. Если свойство равно 0, то индекс равен последнему элементу, иначе предыдущему
+        // Функция parseInt() принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления
 
         slides1[index].classList.add("active");
         slides1[index].classList.remove("unactive");
